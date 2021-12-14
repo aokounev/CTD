@@ -20,7 +20,7 @@ class Vehicle extends Component {
       return
     }
 
-    fetch(`https://swapi.dev/api/vehicles/${id}/`)
+    fetch(`https://www.swapi.tech/api/vehicles/${id}/`)
       .then(response => response.json())
       .then(json => {
         this.setState({ vehicle: json })
@@ -43,7 +43,7 @@ class Vehicle extends Component {
         return
       }
 
-      fetch(`https://swapi.dev/api/vehicles/${id}/`)
+      fetch(`https://www.swapi.tech/api/vehicles/${id}/`)
         .then(response => response.json())
         .then(json => {
           this.setState({ vehicle: json })
