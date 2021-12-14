@@ -13,7 +13,7 @@ class Nav extends Component {
   }
 
   componentDidMount() {
-    // Fetch list of vehicles from SWAPI.co
+    // Fetch list of vehicles from SWAPI.dev
     fetch(`https://swapi.dev/api/vehicles/`)
       .then(response => response.json())
       .then(json => this.setState({ vehicles: json.results }))
@@ -23,7 +23,7 @@ class Nav extends Component {
     return (
       <ul>
         {this.state.vehicles.map((vehicle, index) => {
-          // vehicle.url: https://swapi.co/api/vehicles/4/
+          // vehicle.url: https://swapi.dev/api/vehicles/4/
           const id = vehicle.url.split('/')[5]
           return (
             <li key={index}>
