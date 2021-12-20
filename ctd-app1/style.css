@@ -1,0 +1,27 @@
+.content {
+  width: 100%;
+  display: flex;
+  padding: 12px;
+  border-style: solid;
+  border-color: #bccee9;
+  border-width: 1px;
+  margin-top: 12px;
+}
+
+.result-container {
+  width: 400px;
+}
+
+.details-container {
+  width: 100%;
+}
+
+.search-item {
+  display: flex;
+  padding: 10px;
+  line-height: 40px;
+}
+
+.search-item:hover {
+  background-color: #ecf4ff;
+}
