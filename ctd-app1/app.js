@@ -1,11 +1,11 @@
 
-  const results = document.getElementById("results");
+ const results = document.getElementById("results");
   const details = document.getElementById("details");
   
   function queryPeople() {
     asyncFetch('people');
   }
-
+  
   function queryPlanets() {
     asyncFetch('planets');
   }
@@ -14,11 +14,15 @@
     asyncFetch('vehicles');
   }
 
+  function Clean(){
+    details.innerHTML='';
+  }
+
   async function asyncFetch(value) {
     results.innerHTML = "Loading...";
     let html = "";
     try {
-      const res = await fetch(`https://www.swapi.tech/api/${value}`);
+      const res = await fetch(`https://swapi.dev/api/${value}`);
       const data = await res.json();
       html = renderSearchResults(data, value);
     } catch (error) {
@@ -34,33 +38,72 @@
           `<div class="search-item">
           <label>${item.name}</label>
           <button type="button" class="btn btn-link"
-            onclick="queryDetails('${value}', '${item.uid}', '${item.url}')"
-          >Details [uid=${item.uid}]</button>
-        
-          
+          onclick="queryDetails('${value}', '${item.url}')"
+          >Show Details</button>
           </div>`
     });
     return output;
   }
+  
+  
 
   // Details
-
-  /*async function queryDetails(value, uid, url) {
+  async function queryDetails(value, url) {
     details.innerHTML = "Loading details...";
     let html = "";
-    try {
-      const res = await fetch(url);
-      const data = await res.json();
-       if (people) {
-        const res = await fetch(`https://www.swapi.tech/api/films);
-        const films = await res.json();
-        html = renderPeople(data)
-        html += renderFilms(films)
-      }
- 
-      html = JSON.stringify(data);
-    } catch (error) {
-      html = error.message;
-    }  
+    const detailsResponse = await fetch(url);
+    const detailsJson = await detailsResponse.json();
+        
+        if (value === 'people') {
+        html = renderPeople(detailsJson);
+    }
     details.innerHTML = html;
-  }*/
+    
+    
+    if (value === 'planets') {        
+        html = renderPlanets(detailsJson);
+    }
+    details.innerHTML = html; 
+    
+        if (value === 'vehicles') {
+        html = renderVehicles(detailsJson);
+    }
+    details.innerHTML = html;
+  }
+
+  function renderPeople(data, value) {
+    let output = "";
+    output += `<div><b>Name: ${data.name}</b> </div> `;
+    output += `<div>Height: ${data.height} </div> `;
+    output += `<div>Eye Color: ${data.eye_color} </div> `;
+    output += `<div>Birth Year: ${data.birth_year} </div> `;
+    output += `<div>Hair Color: ${data.hair_color} </div> `;
+    data.films.forEach(filmUrl => {
+      output += `<div>Film: ${filmUrl}</div>`;
+    });
+    return output;}
+
+   
+    function renderPlanets(data, value) {
+      let output = "";
+      output += `<div><b>Name: ${data.name}</b> </div> `;
+      output += `<div>Diameter: ${data.diameter}</div> `;
+      output += `<div>Population: ${data.population}</div> `;
+      output += `<div>Climate: ${data.climate}</div> `;
+      output += `<div>Terrain: ${data.terrain} </div> `;
+      data.films.forEach(filmUrl => {
+        output += `<div>Film: ${filmUrl}</div>`;
+      });
+      return output;}
+
+      function renderVehicles(data, value) {
+        let output = "";
+        output += `<div><b>Name: ${data.name}</b> </div> `;
+        output += `<div>Model: ${data.model} </div> `;
+        output += `<div>Manufacturer: ${data.manufacturer} </div> `;
+        output += `<div>Vehicle Class: ${data.vehicle_class} </div> `;
+        output += `<div>Passengers: ${data.passengers} </div> `;
+        data.films.forEach(filmUrl => {
+          output += `<div>Film: ${filmUrl}</div>`;
+        }); 
+    return output;}
