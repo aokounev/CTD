@@ -106,4 +106,5 @@
         data.films.forEach(filmUrl => {
           output += `<div><b>Film:</b> ${filmUrl}</div>`;
         }); 
-    return output;}
+    return output;
+  }
