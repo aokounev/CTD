@@ -1,5 +1,5 @@
 
- const results = document.getElementById("results");
+  const results = document.getElementById("results");
   const details = document.getElementById("details");
   
   function queryPeople() {
@@ -99,11 +99,11 @@
       function renderVehicles(data, value) {
         let output = "";
         output += `<div><b>Name: ${data.name}</b> </div> `;
-        output += `<div>Model: ${data.model} </div> `;
-        output += `<div>Manufacturer: ${data.manufacturer} </div> `;
-        output += `<div>Vehicle Class: ${data.vehicle_class} </div> `;
-        output += `<div>Passengers: ${data.passengers} </div> `;
+        output += `<div><b>Model:</b> ${data.model} </div> `;
+        output += `<div><b>Manufacturer:</b> ${data.manufacturer} </div> `;
+        output += `<div><b>Vehicle Class:</b> ${data.vehicle_class} </div> `;
+        output += `<div><b>Passengers:</b> ${data.passengers} </div> `;
         data.films.forEach(filmUrl => {
-          output += `<div>Film: ${filmUrl}</div>`;
+          output += `<div><b>Film:</b> ${filmUrl}</div>`;
         }); 
     return output;}
