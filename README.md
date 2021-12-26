@@ -16,3 +16,5 @@ Linux shell commands
 # Deployed site for project ctd-app1:
 https://goofy-khorana-5074cc.netlify.app/
 
+# Deployed site on Netlify for project ctd-app, using React:
+https://distracted-yonath-eb0782.netlify.app/vehicle/18
