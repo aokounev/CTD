@@ -12,3 +12,7 @@ React
 JS, HTML, CSS
 REST API 
 Linux shell commands
+
+# Deployed site for project ctd-app1:
+https://goofy-khorana-5074cc.netlify.app/
+
