@@ -37,7 +37,7 @@
       output +=
           `<div class="search-item">
           <label>${item.name}</label>
-          <button type="button" class="btn btn-link"
+          <button type="button" class="btn btn-link" 
           onclick="queryDetails('${value}', '${item.url}')"
           >Show Details</button>
           </div>`
