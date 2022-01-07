@@ -13,6 +13,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 
 ### You can also view deployed app from build directory on Netlify.com 
-https://distracted-yonath-eb0782.netlify.app/
+https://amazing-archimedes-182fc6.netlify.app/vehicle/20
 
-### It has a bug - you need to click on Home in betwen to change the output
+
