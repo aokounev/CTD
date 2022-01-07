@@ -1,16 +1,11 @@
-import React, { Component } from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  Switch
-} from 'react-router-dom';
-import './Default.css';
+import React, { Component } from "react";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import "./Default.css";
 
-import Home from './components/Home'
-import Error from './components/Error'
-import Nav from './starWars/Nav'
-import Vehicle from './starWars/Vehicle'
+import Home from "./components/Home";
+import Error from "./components/Error";
+import Nav from "./starWars/Nav";
+import Vehicle from "./starWars/Vehicle";
 
 class App extends Component {
   render() {
@@ -19,7 +14,9 @@ class App extends Component {
         <h1>Great Star Wars Vehicles!!!</h1>
         <Router>
           <ul>
-            <li><Link to="/">Home</Link></li>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
           </ul>
           <hr />
           <Nav />
