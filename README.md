@@ -17,4 +17,4 @@ Linux shell commands
 https://goofy-khorana-5074cc.netlify.app/
 
 # Deployed site on Netlify for project ctd-app, using React:
-https://distracted-yonath-eb0782.netlify.app/vehicle/18
+https://amazing-archimedes-182fc6.netlify.app/vehicle/20
