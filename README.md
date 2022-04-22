@@ -14,7 +14,7 @@ REST API
 Linux shell commands
 
 # Deployed site for project ctd-app1:
-https://competent-leavitt-7a5f85.netlify.app/
+https://goofy-khorana-5074cc.netlify.app/
 
 # Deployed site on Netlify for project ctd-app, using React:
 https://amazing-archimedes-182fc6.netlify.app
